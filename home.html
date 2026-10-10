@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: black;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 14px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .option {
+            margin-top: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 11px;
+            margin-top: 22px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Registration Form</h2>
+
+        <form action="/register" method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Password:</label>
+            <input type="password" name="password" required>
+
+            <label>Age:</label>
+            <input type="number" name="age" min="1" required>
+
+            <label>Mobile Number:</label>
+            <input type="text" name="mobile" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Gender:</label>
+            <div class="option">
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+
+            <label>State:</label>
+            <select name="state" required>
+                <option value="">Select State</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+            </select>
+
+            <label>Skills:</label>
+            <div class="option">
+                <input type="checkbox" name="skills" value="HTML"> HTML
+                <input type="checkbox" name="skills" value="CSS"> CSS
+                <input type="checkbox" name="skills" value="JavaScript">
+                JavaScript
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
